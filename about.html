@@ -1,6 +1,6 @@
 ---
 bg: "bgs/about.jpg"
-layout: home
+layout: about
 title: "About"
 crawlertitle: "About me"
 permalink: /about/
@@ -8,16 +8,15 @@ summary: "About this blog"
 active: about
 icon: "fa-user-alt"
 ---
-{% include personal_info.html %}
 
-<div class="posts-list">
-
-Who am i?
-    
+<div class="text-block">
+    Who am I?
 </div>
 
-{% include about_cards/card1.html %}
+    
 
+{% include about_cards/card1.html %}
+<!-- Make sure to always use text-block in the about page, this is not a simple sidebar pages due to the headers-->
 <div class="text-block">
 My interests and hobbies!
 </div>
@@ -33,3 +32,5 @@ My interests and hobbies!
     An even better one!
     
 </div>
+
+

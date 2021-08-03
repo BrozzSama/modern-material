@@ -3,8 +3,10 @@
 
 {% include head.html %}
 
+
 <body class="mdc-typography">
-    <div class="mdc-typography--body1">
+    {% include personal_info.html %}
+    <div class="about-layout page-content mdc-typography--body1">
         {{ content }}
     </div>
     {% include cookie-consent.html %}

@@ -1,6 +1,6 @@
 ---
 bg: "bgs/archive.jpg"
-layout: page
+layout: nosidebar
 permalink: /posts/
 title: "Archive"
 crawlertitle: "All articles"
@@ -9,8 +9,7 @@ active: archive
 icon: fa-archive
 ---
 
-<div class="posts-list-no-sidebar">
-  {% for post in site.posts %}
-  {% include post_preview.html %}
-  {% endfor %}
-</div>
+
+{% for post in site.posts %}
+{% include post_preview.html %}
+{% endfor %}

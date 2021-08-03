@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+
+
+<body class="mdc-typography">
+    {% include personal_info.html %}
+    <div class="sidebar-layout page-content mdc-typography--body1">
+        {{ content }}
+    </div>
+    {% include cookie-consent.html %}
+    {% include footer.html %}
+</body>
+
+</html>
