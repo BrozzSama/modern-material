@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+
+<div class="mdc-layout-grid">
+  <article class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 article">
+    <h3 class="mdc-typography--headline3 post-title" itemprop="name headline">{{ page.title | escape }}</h3>
+
+    <p class="post-meta">
+      {% if page.location %}
+            <div class="mdc-typography--subtitle2 project-info"> <i class="fas fa-building"></i> {{page.location}} </div>
+        {% endif %}
+        
+        {% if page.repo %}
+            <div class="mdc-typography--subtitle2 project-info"> <i class="fab fa-github"></i> <a
+                    href="{{post.repo}}">{{page.repo}}</a></div>
+        {% endif %}
+    </p>
+    <div class="mdc-typography--body1" itemprop="articleBody">
+      {{ content }}
+    </div>
+  </article>
+</div>
+
+{% include cookie-consent.html %}
+{% include footer.html %}
+
+</html>

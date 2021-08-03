@@ -1,0 +1,30 @@
+{
+  "name": "modern-material",
+  "version": "1.0.0",
+  "description": "A modern Material Design Theme for Jekyll",
+  "main": "index.js",
+  "dependencies": {
+    "material-components-web": "^12.0.0",
+    "sass": "^1.37.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrozzSama/modern-material.git"
+  },
+  "keywords": [
+    "jekyll",
+    "jekyll-theme",
+    "material",
+    "blog"
+  ],
+  "author": "Francesco Brozzu",
+  "license": "CC-BY-NC-SA-4.0",
+  "bugs": {
+    "url": "https://github.com/BrozzSama/modern-material/issues"
+  },
+  "homepage": "https://github.com/BrozzSama/modern-material#readme"
+}

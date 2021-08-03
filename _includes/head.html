@@ -1,0 +1,83 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+    <link rel="stylesheet" href="/assets/css/material.css">
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <script src="https://kit.fontawesome.com/2066127954.js" crossorigin="anonymous"></script>
+
+    <aside class="mdc-drawer mdc-drawer--modal">
+        <div class="mdc-drawer__content">
+            <div class="mdc-drawer__header">
+                <h3 class="mdc-drawer__title">Menu</h3>
+            </div>
+            <ul class="mdc-list">
+                {% if page.home == "true" %}
+                <li class="mdc-list-item mdc-list-item--with-one-line mdc-list-item--with-leading-icon"
+                    onclick="location.href ='{{ site.url }}'" role="menuitem" id="home" tabindex="0">
+                    {% else %}
+                <li class="mdc-list-item mdc-list-item--with-one-line mdc-list-item--with-leading-icon"
+                    onclick="location.href ='{{ site.url }}'" role="menuitem" id="{{my_page.active}}">
+                    {% endif %}
+                    <span class="mdc-list-item__ripple"></span>
+                    <span class="mdc-list-item__start">
+                        <i class="fas fa-home fa-fw" aria-hidden="true"></i>
+                    </span>
+                    <span class="mdc-list-item__content nav-text">Home</span>
+                    
+                </li>
+                {% for my_page in site.pages %}
+                {% if my_page.active %}
+                {% if my_page.active == page.active %}
+                <li class="mdc-list-item mdc-list-item--with-one-line mdc-list-item--with-leading-icon"
+                    onclick="location.href ={{ my_page.url }}" role="menuitem" id="{{my_page.active}}" tabindex="0">
+                    {% else %}
+                <li class="mdc-list-item mdc-list-item--with-one-line mdc-list-item--with-leading-icon"
+                    onclick="location.href ={{ my_page.url }}" role="menuitem" id="{{my_page.active}}">
+                    {% endif %}
+                    <span class="mdc-list-item__ripple"></span>
+                    <span class="mdc-list-item__start">
+                        <i class="fas {{my_page.icon}} fa-fw" aria-hidden="true"></i>
+                    </span>
+                    <span class="mdc-list-item__content nav-text">{{my_page.title}}</span>
+                </li>
+                {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
+    </aside>
+    <div class="mdc-drawer-scrim"></div>
+
+    <header class="mdc-top-app-bar">
+        <div class="mdc-top-app-bar__row navbar">
+            <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+                <span class="mdc-top-app-bar__navigation-icon drawer-trigger"><i class="fas fa-bars"></i></span>
+                <a href="{{site.url}}" class="mdc-typography--overline">{{ site.name }}</a>
+            </section>
+            <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end">
+                <div class="desktop-menu mdc-tab-scroller__scroll-area mdc-tab-scroller__scroll-area--scroll">
+                    {% for my_page in site.pages %}
+                    {% if my_page.active %}
+                    <div class="mdc-tab">
+                        <a href="{{ my_page.url }}" class="mdc-tab__content mdc-typography--subtitle1">{{ my_page.title
+                            }}</a>
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+
+                </div>
+        </div>
+    </header>
+    <script>
+        const MDCList = mdc.list.MDCList;
+        const MDCDrawer = mdc.drawer.MDCDrawer;
+        const drawer = mdc.drawer.MDCDrawer.attachTo(document.querySelector('.mdc-drawer'));
+        const topAppBar = mdc.topAppBar.MDCTopAppBar.attachTo(document.querySelector('.mdc-top-app-bar'));
+        topAppBar.listen('MDCTopAppBar:nav', () => {
+            drawer.open = !drawer.open;
+        });
+
+    </script>
+</head>

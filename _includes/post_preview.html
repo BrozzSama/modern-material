@@ -1,0 +1,17 @@
+<article class="article-preview">
+    <h3 class="mdc-typography--headline4 post-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+        {% if {{post.location}} %}
+            <div class="mdc-typography--subtitle2 project-info"> <i class="fas fa-building"></i> {{post.location}} </div>
+        {% endif %}
+        
+        {% if {{post.repo}} %}
+            <div class="mdc-typography--subtitle2 project-info"> <i class="fab fa-github"></i> <a
+                    href="{{post.repo}}">{{post.repo}}</a></div>
+        {% endif %}
+        <div class="mdc-typography--body1">
+            {{ post.excerpt }}
+            <div>
+                <a href="{{ post.url }}"><b>Read more...</b></a>
+            </div>
+        </div>
+</article>

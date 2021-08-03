@@ -1,0 +1,315 @@
+body{
+    margin:0;
+}
+/* This part resizes sidebar and post list */
+
+.personal-info{
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.52), transparent), url('imgs/profile.jpeg');
+    background-size: cover;
+    height: 100%;
+    position:fixed;
+    width: 30%;
+    display: inline-block;
+    background-position: center;
+    color: white;
+}
+
+.personal-info-container {
+    padding: 6em;
+}
+
+.posts-list {
+    margin-top: 4.5em;
+    margin-left: 40%;
+    margin-right: 5%;
+    padding: 1em;
+    width: 50%;
+    display:inline-block;
+}
+
+.posts-list h3{
+    margin-bottom:0.20em;
+}
+
+.posts-list-no-sidebar {
+    margin-top: 4.5em;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding: 1em;
+    width: auto;
+    display:inline-block;
+}
+
+/* Disable about headers image in desktop mode */
+
+#about-card1 {
+    background-image: none;
+}
+
+#about-card2 {
+    background-image: none;
+}
+
+.about-card {
+    padding: 0em 1em;
+    margin-left: 40%;
+    margin-right: 5%;
+    color: black;
+    display: block;
+}
+
+.page-content {
+    margin-top: 4.5em;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.drawer-trigger {
+    padding: 1em;
+    display: none;
+}
+
+.name {
+    margin-bottom:0.1em;
+}
+
+.home h3{
+    margin-bottom:0.25em;
+}
+
+.project-list h3{
+    margin-bottom:0.25em;
+}
+
+.project-info{
+    opacity: 80%;
+    margin: 0.5em;
+    display:inline-block;
+}
+
+.brand-icon {
+    padding: 0.5em;
+    font-size: 15pt;
+    display: inline-block;
+}
+
+.brand-icon a{
+    text-decoration: none;
+    color:white;
+}
+
+.post-content{
+    margin: 9em;
+}
+
+img {
+    width: 80%;
+}
+
+.article-preview a{
+    text-decoration: none;
+    color: black;
+    -webkit-transition: opacity 0.5s ease-in-out;
+    -moz-transition: opacity 0.5s ease-in-out;
+    -ms-transition: opacity 0.5s ease-in-out;
+    -o-transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.article-preview a:hover {
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+}
+
+.article {
+    margin-top: 4.5em;
+    margin-right: 30%;
+    margin-left: 30%;
+}
+
+
+div.highlight{
+    background-color: aliceblue;
+    padding: 0.5em;
+}
+
+pre.highlight{
+    margin: 0;
+}
+
+header{
+    top: 0px;
+    right:0px;
+}
+
+header a{
+    text-decoration: none;
+    color: white;
+    -webkit-transition: opacity 0.5s ease-in-out;
+    -moz-transition: opacity 0.5s ease-in-out;
+    -ms-transition: opacity 0.5s ease-in-out;
+    -o-transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
+    pointer-events: all !important; 
+}
+
+header a:hover{
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+}
+
+.navbar {
+    padding: 0em 1em;
+}
+
+.nav-text {
+    font-weight: bold;
+}
+
+#cookie-notice{
+    width: 100%;
+    height: auto;
+    background-color: #1f8199;
+    text-align: center; position: fixed; bottom: 0;
+    color:white;
+    display:block;
+}
+#cookie-notice-actions{
+    display:inline-block;
+}
+
+#cookie-notice a {display: inline-block; cursor: pointer;}
+
+footer {
+    display: none;
+}
+
+.desktop-footer{
+    display: block;
+}
+
+.desktop-footer a {
+    color:white;
+}
+
+/* Adapt style to mobile screens */
+
+@media screen and (max-width: 1000px) {
+
+    .page-content {
+        // Remove footer and top app bar
+        min-height : calc(100vh - 1rem);
+    }
+    // Remember to avoid putting margin in body elements and to use padding
+    // otherwise the drawer will not respond well to the change
+    .posts-list, .posts-list-no-sidebar {
+        margin: 0;
+        padding: 2em 1em 1em 1em;
+        display: block;
+    }
+
+    .text-block{
+        margin: 0em;
+        padding:1em;
+        width: 90%;
+        display: block;
+    }
+
+    .page-content {
+        margin: 0em;
+    }
+
+    .personal-info {
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.52), transparent), url('imgs/cover_mobile.jpeg');
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        height: auto;
+        width: 100%;
+        position: relative;
+        background-position: center;
+        color: white;
+        display: block;
+    }
+
+    .personal-info-container {
+        padding: 4.5em 5% 0.5em 5%;
+    }
+
+    .about-card {
+        padding: 6em 5% 0.5em 5%;
+        padding-top: 4em;
+        margin: 0em;
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        height: auto;
+        width: 90%;
+        position: relative;
+        background-position: center;
+        color: white;
+        display: block;
+    }
+
+    .desktop-menu{
+        display:none;
+    }
+    .drawer-trigger {
+        padding: 1em;
+        display:inline-block;
+    }
+
+    .article {
+        margin-top: 4.5em;
+        margin-right: 5%;
+        margin-left: 5%;
+    }
+    #cookie-notice{
+        width:96%;
+        height: auto;
+        background-color: #1f8199;
+        text-align: center; position: fixed; bottom: 0;
+        color:white;
+        display:block;
+        padding:2%;
+    }
+
+    #cookie-notice-actions{
+        display:block;
+        padding-top: 0.5em;
+    } 
+
+    
+    .navbar {
+        padding: 0em;
+    }
+
+    #about-card1 {
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.52), transparent), url('imgs/about-card1.jpeg');
+    }
+    
+    #about-card2 {
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.52), transparent), url('imgs/about-card2.jpeg');
+    }
+
+    .desktop-footer {
+        display:none;
+    }
+
+    footer {
+        background-color: #1f8199;
+        color: white;
+        text-align: center;
+        padding: 0.5rem;
+        min-height: 1rem;
+        display: block;
+        width: 100%;
+        width: -moz-available;          /* WebKit-based browsers will ignore this. */
+        width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+        width: fill-available;
+    }
+
+    footer a{
+        color:white;
+    }
+}
