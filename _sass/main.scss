@@ -60,7 +60,7 @@ pre {
 }
 
 .text-block{
-    margin: 0em;
+    margin: 0;
     padding:1em;
     display: block;
 }
@@ -76,7 +76,7 @@ pre {
 }
 
 .about-card {
-    margin: 0em;
+    margin: 0;
     padding:1em;
     display: block;
 }
@@ -144,8 +144,8 @@ pre.highlight{
 }
 
 header{
-    top: 0px;
-    right:0px;
+    top: 0;
+    right:0;
 }
 
 header a{
@@ -165,7 +165,7 @@ header a:hover{
 }
 
 .navbar {
-    padding: 0em 1em;
+    padding: 0 1em;
 }
 
 .nav-text {
@@ -205,7 +205,7 @@ footer {
     .page-content {
         // Remove footer and top app bar
         min-height : calc(100vh - 1em - 1rem);
-        margin: 0em;
+        margin: 0;
     }
     // Remember to avoid putting margin in body elements and to use padding
     // otherwise the drawer will not respond well to the change
@@ -228,7 +228,7 @@ footer {
     }
 
     .text-block{
-        margin: 0em;
+        margin: 0;
         padding:1em;
         width: auto;
         display: block;
@@ -248,13 +248,13 @@ footer {
     }
 
     .personal-info-container {
-        padding: 4.5em 5% 0.5em 5%;
+        padding: 4.5em 5% 0.5em;
     }
 
     .about-card {
-        padding: 6em 5% 0.5em 5%;
+        padding: 6em 5% 0.5em;
         padding-top: 4em;
-        margin: 0em;
+        margin: 0;
         background-size: cover;
         background-attachment: fixed;
         background-repeat: no-repeat;
@@ -296,7 +296,7 @@ footer {
     } 
 
     .navbar {
-        padding: 0em;
+        padding: 0;
     }
 
     #about-card1 {
